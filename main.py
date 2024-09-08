@@ -19,6 +19,11 @@ df.fillna(0, inplace=True)
 # Gráfico de barras: distribuição dos tipos de ataque
 plt.figure(figsize=(10, 6))
 attack_count = df['Attack_type'].value_counts()
+
+# Exibir os dados usados no gráfico
+print("Distribuição dos tipos de ataque:")
+print(attack_count)
+
 sns.barplot(x=attack_count.index, y=attack_count.values)
 plt.title('Distribuição dos Tipos de Ataque', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
@@ -36,6 +41,11 @@ attack_counts = df['Attack_type'].value_counts()
 percentages = (attack_counts / attack_counts.sum()) * 100
 labels_with_percentages = [f'{label} ({percentage:.1f}%)' for label, percentage in zip(attack_counts.index, percentages)]
 
+# Exibir os dados usados no gráfico
+print("\nDistribuição percentual dos tipos de ataque:")
+print(attack_counts)
+print("Percentagens:", percentages)
+
 # Criar o gráfico de pizza sem os rótulos diretamente no gráfico
 plt.pie(attack_counts, labels=None, autopct='%1.1f%%', startangle=90, 
         textprops={'fontsize': 10}, pctdistance=0.85)
@@ -50,6 +60,11 @@ plt.show()
 # Gráfico de barras: relação entre 'fwd_init_window_size' (tamanho inicial da janela FWD) e tipos de ataque
 plt.figure(figsize=(10, 6))
 fwd_init_mean = df.groupby('Attack_type')['fwd_init_window_size'].mean()
+
+# Exibir os dados usados no gráfico
+print("\nTamanho inicial da janela FWD médio por tipo de ataque:")
+print(fwd_init_mean)
+
 sns.barplot(x=fwd_init_mean.index, y=fwd_init_mean.values)
 plt.title('Tamanho Inicial da Janela (FWD) Médio por Tipo de Ataque', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
@@ -62,6 +77,11 @@ plt.show()
 # Gráfico de barras: relação entre 'bwd_init_window_size' (tamanho inicial da janela BWD) e tipos de ataque
 plt.figure(figsize=(10, 6))
 bwd_init_mean = df.groupby('Attack_type')['bwd_init_window_size'].mean()
+
+# Exibir os dados usados no gráfico
+print("\nTamanho inicial da janela BWD médio por tipo de ataque:")
+print(bwd_init_mean)
+
 sns.barplot(x=bwd_init_mean.index, y=bwd_init_mean.values)
 plt.title('Tamanho Inicial da Janela (BWD) Médio por Tipo de Ataque', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
@@ -74,6 +94,11 @@ plt.show()
 # Gráfico de barras: relação entre 'fwd_last_window_size' (último tamanho da janela FWD) e tipos de ataque
 plt.figure(figsize=(10, 6))
 fwd_last_mean = df.groupby('Attack_type')['fwd_last_window_size'].mean()
+
+# Exibir os dados usados no gráfico
+print("\nÚltimo tamanho da janela FWD médio por tipo de ataque:")
+print(fwd_last_mean)
+
 sns.barplot(x=fwd_last_mean.index, y=fwd_last_mean.values)
 plt.title('Último Tamanho da Janela (FWD) Médio por Tipo de Ataque', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
@@ -86,6 +111,11 @@ plt.show()
 # Gráfico de barras: relação entre 'flow_duration' (duração do fluxo) e tipos de ataque
 plt.figure(figsize=(10, 6))
 flow_duration_mean = df.groupby('Attack_type')['flow_duration'].mean()
+
+# Exibir os dados usados no gráfico
+print("\nDuração média do fluxo por tipo de ataque:")
+print(flow_duration_mean)
+
 sns.barplot(x=flow_duration_mean.index, y=flow_duration_mean.values)
 plt.title('Duração Média do Fluxo por Tipo de Ataque', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
@@ -98,6 +128,11 @@ plt.show()
 # Gráfico de barras: relação entre 'fwd_pkts_tot' (pacotes encaminhados) e tipos de ataque
 plt.figure(figsize=(10, 6))
 fwd_pkts_mean = df.groupby('Attack_type')['fwd_pkts_tot'].mean()
+
+# Exibir os dados usados no gráfico
+print("\nPacotes encaminhados médios por tipo de ataque:")
+print(fwd_pkts_mean)
+
 sns.barplot(x=fwd_pkts_mean.index, y=fwd_pkts_mean.values)
 plt.title('Pacotes Encaminhados Médios por Tipo de Ataque', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
@@ -106,27 +141,3 @@ plt.ylabel('Pacotes Médios', fontsize=12)
 plt.xlabel('Tipo de Ataque', fontsize=12)
 plt.tight_layout()  # Ajustar layout
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
