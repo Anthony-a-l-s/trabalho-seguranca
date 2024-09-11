@@ -26,10 +26,11 @@ print("\nContagem dos tipos de ataque:")
 print(attack_count)
 
 sns.barplot(x=attack_count.index, y=attack_count.values)
-plt.title('Distribuição dos Tipos de Ataque', fontsize=14)
+plt.yscale('log')  # Escala logarítmica no eixo Y
+plt.title('Distribuição dos Tipos de Ataque (Escala Logarítmica)', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
 plt.yticks(fontsize=10)
-plt.ylabel('Quantidade', fontsize=12)
+plt.ylabel('Quantidade (log)', fontsize=12)
 plt.xlabel('Tipo de Ataque', fontsize=12)
 plt.tight_layout()  # Ajustar layout
 plt.show()
@@ -66,10 +67,11 @@ print("\nMédia de 'fwd_init_window_size' por tipo de ataque:")
 print(fwd_init_mean)
 
 sns.barplot(x=fwd_init_mean.index, y=fwd_init_mean.values)
-plt.title('Tamanho Inicial da Janela (FWD) Médio por Tipo de Ataque', fontsize=14)
+plt.yscale('log')  # Escala logarítmica no eixo Y
+plt.title('Tamanho Inicial da Janela (FWD) Médio por Tipo de Ataque (Escala Logarítmica)', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
 plt.yticks(fontsize=10)
-plt.ylabel('Tamanho Médio', fontsize=12)
+plt.ylabel('Tamanho Médio (log)', fontsize=12)
 plt.xlabel('Tipo de Ataque', fontsize=12)
 plt.tight_layout()  # Ajustar layout
 plt.show()
@@ -83,10 +85,11 @@ print("\nMédia de 'bwd_init_window_size' por tipo de ataque:")
 print(bwd_init_mean)
 
 sns.barplot(x=bwd_init_mean.index, y=bwd_init_mean.values)
-plt.title('Tamanho Inicial da Janela (BWD) Médio por Tipo de Ataque', fontsize=14)
+plt.yscale('log')  # Escala logarítmica no eixo Y
+plt.title('Tamanho Inicial da Janela (BWD) Médio por Tipo de Ataque (Escala Logarítmica)', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
 plt.yticks(fontsize=10)
-plt.ylabel('Tamanho Médio', fontsize=12)
+plt.ylabel('Tamanho Médio (log)', fontsize=12)
 plt.xlabel('Tipo de Ataque', fontsize=12)
 plt.tight_layout()  # Ajustar layout
 plt.show()
@@ -100,10 +103,11 @@ print("\nMédia de 'fwd_last_window_size' por tipo de ataque:")
 print(fwd_last_mean)
 
 sns.barplot(x=fwd_last_mean.index, y=fwd_last_mean.values)
-plt.title('Último Tamanho da Janela (FWD) Médio por Tipo de Ataque', fontsize=14)
+plt.yscale('log')  # Escala logarítmica no eixo Y
+plt.title('Último Tamanho da Janela (FWD) Médio por Tipo de Ataque (Escala Logarítmica)', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
 plt.yticks(fontsize=10)
-plt.ylabel('Tamanho Médio', fontsize=12)
+plt.ylabel('Tamanho Médio (log)', fontsize=12)
 plt.xlabel('Tipo de Ataque', fontsize=12)
 plt.tight_layout()  # Ajustar layout
 plt.show()
@@ -117,10 +121,11 @@ print("\nMédia de 'flow_duration' por tipo de ataque:")
 print(flow_duration_mean)
 
 sns.barplot(x=flow_duration_mean.index, y=flow_duration_mean.values)
-plt.title('Duração Média do Fluxo por Tipo de Ataque', fontsize=14)
+plt.yscale('log')  # Escala logarítmica no eixo Y
+plt.title('Duração Média do Fluxo por Tipo de Ataque (Escala Logarítmica)', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
 plt.yticks(fontsize=10)
-plt.ylabel('Duração Média', fontsize=12)
+plt.ylabel('Duração Média (log)', fontsize=12)
 plt.xlabel('Tipo de Ataque', fontsize=12)
 plt.tight_layout()  # Ajustar layout
 plt.show()
@@ -134,10 +139,11 @@ print("\nMédia de 'fwd_pkts_tot' por tipo de ataque:")
 print(fwd_pkts_mean)
 
 sns.barplot(x=fwd_pkts_mean.index, y=fwd_pkts_mean.values)
-plt.title('Pacotes Encaminhados Médios por Tipo de Ataque', fontsize=14)
+plt.yscale('log')  # Escala logarítmica no eixo Y
+plt.title('Pacotes Encaminhados Médios por Tipo de Ataque (Escala Logarítmica)', fontsize=14)
 plt.xticks(rotation=90, fontsize=10)
 plt.yticks(fontsize=10)
-plt.ylabel('Pacotes Médios', fontsize=12)
+plt.ylabel('Pacotes Médios (log)', fontsize=12)
 plt.xlabel('Tipo de Ataque', fontsize=12)
 plt.tight_layout()  # Ajustar layout
 plt.show()
