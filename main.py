@@ -151,3 +151,5 @@ gerar_graficos(df)
 
 # Executar a função para gerar insights
 gerar_insights(df)
+
+##
